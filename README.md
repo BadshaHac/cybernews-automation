@@ -20,7 +20,26 @@ This project is an **automated workflow** built with [n8n](https://n8n.io/) that
 
 ## 📸 Preview
 
-<img width="1342" height="327" alt="image" src="https://github.com/user-attachments/assets/f563e6c5-cd6e-4084-9bbd-d0df28462222" />
+<img width="1342" height="327" alt="image" src="https://github.com/user-attachments/assets/f563e6c5-cd6e-4084-9bbd-d0df28462222" /> 
+
+##each node preview
+
+
+<img width="1909" height="930" alt="image" src="https://github.com/user-attachments/assets/23381f64-4734-4bc0-bed4-1fab397ae013" />
+<img width="1910" height="902" alt="image" src="https://github.com/user-attachments/assets/5969dc5b-8cdb-4c11-a443-ebe876ef2d6a" />
+<img width="1917" height="911" alt="image" src="https://github.com/user-attachments/assets/174440a8-8ac3-4055-aa8e-c56434ac539e" />
+
+Format News Summary code - 
+
+( check out the txt file for code as formatnewsummarycode.txt )
+
+<img width="1919" height="925" alt="image" src="https://github.com/user-attachments/assets/70de1f8b-d038-4a5f-b800-5b95a4202380" />
+
+
+
+
+
+
 
 
 
@@ -29,7 +48,7 @@ This project is an **automated workflow** built with [n8n](https://n8n.io/) that
 ## 🛠️ Tools Used
 
 - [n8n Cloud](https://n8n.io/)
-- NewsAPI.org (https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=API KEY)
+- NewsAPI.org ( https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=API KEY )
 - Gmail SMTP (in n8n Email Node)
 - JavaScript (for summarizing content)
 
