@@ -29,7 +29,7 @@ This project is an **automated workflow** built with [n8n](https://n8n.io/) that
 ## 🛠️ Tools Used
 
 - [n8n Cloud](https://n8n.io/)
-- NewsAPI.org
+- NewsAPI.org (https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=API KEY)
 - Gmail SMTP (in n8n Email Node)
 - JavaScript (for summarizing content)
 
