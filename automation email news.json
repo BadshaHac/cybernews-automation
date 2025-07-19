@@ -1,0 +1,121 @@
+{
+  "name": "My workflow 5",
+  "nodes": [
+    {
+      "parameters": {
+        "url": "https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=24ea28290ce54815a551d22fc31e082b",
+        "options": {}
+      },
+      "id": "6f76ad56-860e-444a-b94e-a37d15eb804f",
+      "name": "Fetch Indian News",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [
+        120,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "functionCode": "const articles = items[0].json.articles;\nlet summary = '**🧠 Daily Hacker News Digest**\\n\\n';\n\narticles.forEach((article, index) => {\n  const title = article.title || 'No Title';\n  const url = article.url || '#';\n  const date = new Date(article.publishedAt).toLocaleDateString('en-IN', {\n    day: '2-digit', month: 'short', year: 'numeric'\n  });\n\n  // Better summary logic: take first 2 sentences or 300 chars max\n  const description = article.description || '';\n  let shortDescription = description.split('. ').slice(0, 2).join('. ');\n  shortDescription = shortDescription.length > 300 ? shortDescription.slice(0, 300) + '...' : shortDescription;\n\n  summary += `🔐 *${index + 1}. ${title}*\\n📅 ${date}\\n🔗 ${url}\\n📝 ${shortDescription || 'No summary available.'}\\n\\n`;\n});\n\nreturn [{ json: { newsSummary: summary } }];\n"
+      },
+      "id": "2a089b36-7f31-4bb7-a064-b7564533d4a0",
+      "name": "Format News Summary",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [
+        360,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "fromEmail": "tellstory372@gmail.com",
+        "toEmail": "nomul.premkumar04@gmail.com,sairajsbarve@gmail.com",
+        "subject": "📰 Daily Indian News Summary",
+        "text": "={{$json[\"newsSummary\"]}}",
+        "options": {}
+      },
+      "id": "79fef6e8-1b6f-4148-8c7d-ce9664bd5f81",
+      "name": "Send Email",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 1,
+      "position": [
+        600,
+        120
+      ],
+      "credentials": {
+        "smtp": {
+          "id": "j66QoKjDI5XIeie7",
+          "name": "SMTP account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -100,
+        120
+      ],
+      "id": "562eb8cb-2a35-4b4c-9b14-d6ee58ff31ec",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Fetch Indian News": {
+      "main": [
+        [
+          {
+            "node": "Format News Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Format News Summary": {
+      "main": [
+        [
+          {
+            "node": "Send Email",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "Fetch Indian News",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "70368c39-4632-4d13-b751-06fee6fe06b5",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "7bff8f9f9b912ab09a00bead65ebab23f0497c00dfe7f007f51c2db599fa8ad5"
+  },
+  "id": "wPxuEvMgvkcuaagz",
+  "tags": []
+}
