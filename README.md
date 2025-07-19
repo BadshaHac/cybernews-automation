@@ -49,7 +49,7 @@ This project is an **automated workflow** built with [n8n](https://n8n.io/) that
 
 | File          | Description                      |
 |---------------|----------------------------------|
-| `workflow.json` | Full n8n workflow export         |
+| `automation email news.json` | Full n8n workflow export         |
 | `preview.png`   | Screenshot of n8n visual flow    |
 | `README.md`     | This documentation file          |
 
