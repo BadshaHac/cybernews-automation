@@ -1,9 +1,9 @@
 {
-  "name": "My workflow 5",
+  "name": "Cybersecurity News Daily Digest",
   "nodes": [
     {
       "parameters": {
-        "url": "https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=24ea28290ce54815a551d22fc31e082b",
+        "url": "https://newsapi.org/v2/everything?q=hacking OR hacker OR cybersecurity  OR penetration testing  OR cybersecurity&sortBy=publishedAt&language=en&pageSize=10&apiKey=YOUR_NEWSAPI_KEY_HERE",
         "options": {}
       },
       "id": "6f76ad56-860e-444a-b94e-a37d15eb804f",
@@ -30,9 +30,9 @@
     },
     {
       "parameters": {
-        "fromEmail": " ",
-        "toEmail": " ",
-        "subject": "📰 Daily Indian News Summary",
+        "fromEmail": "your-email@gmail.com",
+        "toEmail": "recipient@example.com",
+        "subject": "📰 Daily Cybersecurity News Summary",
         "text": "={{$json[\"newsSummary\"]}}",
         "options": {}
       },
