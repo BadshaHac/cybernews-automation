@@ -46,7 +46,7 @@
       ],
       "credentials": {
         "smtp": {
-          "id": " ",
+          "id": " google 2fa code ",
           "name": "SMTP account 2"
         }
       }
