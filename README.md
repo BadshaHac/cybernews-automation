@@ -190,13 +190,27 @@ pageSize=20
 Edit the JavaScript in the Function node ([`formatnewssummarycode.txt`](formatnewssummarycode.txt)):
 
 ```javascript
-// Example: Add source information
-summary += `📰 Source: ${article.source.name}\n`;
+const articles = items[0].json.articles;
+let summary = '**🧠 Daily Hacker News Digest**\n\n';
 
-// Example: Include article image
-if (article.urlToImage) {
-  summary += `🖼️ [View Image](${article.urlToImage})\n`;
-}
+articles.forEach((article, index) => {
+  const title = article.title || 'No Title';
+  const url = article.url || '#';
+  const date = new Date(article.publishedAt).toLocaleDateString('en-IN', {
+    day: '2-digit', month: 'short', year: 'numeric'
+  });
+
+  // Better summary logic: take first 2 sentences or 300 chars max
+  const description = article.description || '';
+  let shortDescription = description.split('. ').slice(0, 2).join('. ');
+  shortDescription = shortDescription.length > 300 ? shortDescription.slice(0, 300) + '...' : shortDescription;
+
+  summary += `🔐 *${index + 1}. ${title}*\n📅 ${date}\n🔗 ${url}\n📝 ${shortDescription || 'No summary available.'}\n\n`;
+});
+
+return [{ json: { newsSummary: summary } }];
+
+
 ```
 
 ### Filter by Region
