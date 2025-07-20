@@ -30,8 +30,8 @@
     },
     {
       "parameters": {
-        "fromEmail": "tellstory372@gmail.com",
-        "toEmail": "nomul.premkumar04@gmail.com,sairajsbarve@gmail.com",
+        "fromEmail": " ",
+        "toEmail": " ",
         "subject": "📰 Daily Indian News Summary",
         "text": "={{$json[\"newsSummary\"]}}",
         "options": {}
