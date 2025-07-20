@@ -22,7 +22,7 @@ This project is an **automated workflow** built with [n8n](https://n8n.io/) that
 
 <img width="1342" height="327" alt="image" src="https://github.com/user-attachments/assets/f563e6c5-cd6e-4084-9bbd-d0df28462222" /> 
 
-##each node preview
+## each node preview
 
 
 <img width="1909" height="930" alt="image" src="https://github.com/user-attachments/assets/23381f64-4734-4bc0-bed4-1fab397ae013" />
