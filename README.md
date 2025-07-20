@@ -7,17 +7,20 @@
 
 ## 📋 Table of Contents
 
-- [Overview](#overview)
-- [Features](#features)
-- [Architecture](#architecture)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-- [Security](#security)
-- [Customization](#customization)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
+- [🎯 Overview](#-overview)
+- [✨ Features](#-features)
+- [🏗️ Architecture](#️-architecture)
+- [📸 Workflow Preview](#-workflow-preview)
+- [🔧 Prerequisites](#-prerequisites)
+- [📥 Installation](#-installation)
+- [⚙️ Configuration](#️-configuration)
+- [🔒 Security](#-security)
+- [🎨 Customization](#-customization)
+- [🐛 Troubleshooting](#-troubleshooting)
+- [📦 Project Structure](#-project-structure)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
+- [👨‍💻 Author](#-author)
 
 ## 🎯 Overview
 
